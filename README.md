@@ -37,6 +37,11 @@
 
 ## Step #1 : Creating Prometheus System Users and Directory
 
-Create a system user for Prometheus using below commnds :
+### Create a system user for Prometheus using below commnds :
 
 ~ sudo useradd --no-create-home --shell /bin/false prometheus
+
+### Create the directories in which we will be storing our configuration files and libraries :
+
+~ sudo mkdir /etc/prometheus
+~ sudo mkdir /var/lib/prometheus
