@@ -30,3 +30,13 @@
   <li>Sufficient storage on your system and good internet connectivity.</li>
   <li>Ports Required- 9090 (Prometheus), 3000 (Grafana), 9100 (Node Exporter)</li>
 </ul>
+
+### We will update the system repository index by using the following command.
+
+~ sudo apt update -y
+
+## Step #1 : Creating Prometheus System Users and Directory
+
+Create a system user for Prometheus using below commnds :
+
+~ sudo useradd --no-create-home --shell /bin/false prometheus
