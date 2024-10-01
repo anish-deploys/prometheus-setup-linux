@@ -21,3 +21,12 @@
    <li>4. Alert Manager</li>
    <li>5. User Interface</li>
  </ul>
+
+## Prerequisites
+<ul>
+  <li>Ubuntu with 22.04 Version</li>
+  <li>Root user account with sudo  privilege.</li>
+  <li>Prometheus system user and group.</li>
+  <li>Sufficient storage on your system and good internet connectivity.</li>
+  <li>Ports Required- 9090 (Prometheus), 3000 (Grafana), 9100 (Node Exporter)</li>
+</ul>
