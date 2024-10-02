@@ -71,3 +71,15 @@
 ~ sudo mv prometheus.yml /etc/prometheus
 
 ~ sudo chown -R prometheus:prometheus /etc/prometheus
+
+### Move the binaries and set the owner :
+
+~ sudo mv prometheus /usr/local/bin/
+
+~ sudo chown prometheus:prometheus /usr/local/bin/prometheus
+
+## Step #3 : Prometheus configuration file
+
+### We have already copied /opt/prometheus-2.26.0.linux-amd64/prometheus.yml file /etc/prometheus directory, verify if it present and should look like below and modify it as per your requirement.
+
+~ sudo nano /etc/prometheus/prometheus.yml
