@@ -59,3 +59,15 @@
 ~ wget https://github.com/prometheus/prometheus/releases/download/v2.46.0/prometheus-2.46.0.linux-amd64.tar.gz
 
 ### Extract the files using tar :
+
+~ tar -xvf prometheus-2.46.0.linux-amd64.tar.gz
+
+### Move the configuration file and set the owner to the prometheus user :
+
+~ cd prometheus-2.46.0.linux-amd64
+
+~ sudo mv console* /etc/prometheus
+
+~ sudo mv prometheus.yml /etc/prometheus
+
+~ sudo chown -R prometheus:prometheus /etc/prometheus
