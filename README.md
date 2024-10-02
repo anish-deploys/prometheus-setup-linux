@@ -45,3 +45,17 @@
 
 ~ sudo mkdir /etc/prometheus
 ~ sudo mkdir /var/lib/prometheus
+
+## Step #2 : Download Prometheus Binary File
+
+### Using below command we can download Prometheus, here we are downloading Prometheus 2.46 version, you use above link to download specific version.
+
+### You need to go inside /tmp dir :
+
+~ cd /tmp/
+
+### Download the Prometheus setup using wget
+
+~ wget https://github.com/prometheus/prometheus/releases/download/v2.46.0/prometheus-2.46.0.linux-amd64.tar.gz
+
+### Extract the files using tar :
