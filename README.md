@@ -86,16 +86,16 @@
 
 Enter this code and Ctrl + S to save and Ctrl + X to exit
 
-[Unit]
-Description=Prometheus
-Wants=network-online.target
-After=network-online.target
+    [Unit]
+    Description=Prometheus
+    Wants=network-online.target
+    After=network-online.target
 
-[Service]
-User=prometheus
-Group=prometheus
-Type=simple
-ExecStart=/usr/local/bin/prometheus \
+    [Service]
+    User=prometheus
+    Group=prometheus
+    Type=simple
+    ExecStart=/usr/local/bin/prometheus \
 
     --config.file /etc/prometheus/prometheus.yml \
     
@@ -107,9 +107,9 @@ ExecStart=/usr/local/bin/prometheus \
     
     --web.listen-address=0.0.0.0:9090
     
-Restart=always
-RestartSec=10s
-[Install]
-WantedBy=multi-user.target
+    Restart=always
+    RestartSec=10s
+    [Install]
+    WantedBy=multi-user.target
 
 
