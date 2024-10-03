@@ -83,3 +83,33 @@
 ### We have already copied /opt/prometheus-2.26.0.linux-amd64/prometheus.yml file /etc/prometheus directory, verify if it present and should look like below and modify it as per your requirement.
 
 ~ sudo nano /etc/prometheus/prometheus.yml
+
+Enter this code and Ctrl + S to save and Ctrl + X to exit
+
+[Unit]
+Description=Prometheus
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+User=prometheus
+Group=prometheus
+Type=simple
+ExecStart=/usr/local/bin/prometheus \
+
+    --config.file /etc/prometheus/prometheus.yml \
+    
+    --storage.tsdb.path /var/lib/prometheus/ \
+    
+    --web.console.templates=/etc/prometheus/consoles \
+    
+    --web.console.libraries=/etc/prometheus/console_libraries
+    
+    --web.listen-address=0.0.0.0:9090
+    
+Restart=always
+RestartSec=10s
+[Install]
+WantedBy=multi-user.target
+
+
