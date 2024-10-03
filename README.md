@@ -96,20 +96,36 @@ Enter this code and Ctrl + S to save and Ctrl + X to exit
     Group=prometheus
     Type=simple
     ExecStart=/usr/local/bin/prometheus \
-
-    --config.file /etc/prometheus/prometheus.yml \
-    
-    --storage.tsdb.path /var/lib/prometheus/ \
-    
-    --web.console.templates=/etc/prometheus/consoles \
-    
-    --web.console.libraries=/etc/prometheus/console_libraries
-    
-    --web.listen-address=0.0.0.0:9090
-    
+        --config.file /etc/prometheus/prometheus.yml \
+        --storage.tsdb.path /var/lib/prometheus/ \
+        --web.console.templates=/etc/prometheus/consoles \
+        --web.console.libraries=/etc/prometheus/console_libraries
+        --web.listen-address=0.0.0.0:9090  
     Restart=always
     RestartSec=10s
     [Install]
     WantedBy=multi-user.target
+
+### Reload systemd :
+
+    sudo systemctl daemon-reload
+
+### Start, Enable, Status Prometheus service :
+
+    sudo systemctl start prometheus
+    sudo systemctl enable prometheus
+    sudo systemctl status prometheus
+
+## Step #5 : Accessing Prometheus in Browser
+
+### Now as Prometheus installation and configuration is set up and it is ready to use we can access  its services via web interface.Also check weather port 9090 is UP in firewall.
+### Use below command to enable prometheus service in firewall 
+
+    sudo ufw allow 9090/tcp
+
+### Now Prometheus service is ready to run and we can access it from any web browser.
+
+    http://server-IP-or-Hostname:9090
+    
 
 
