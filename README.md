@@ -33,18 +33,18 @@
 
 ### We will update the system repository index by using the following command.
 
-~ sudo apt update -y
+    sudo apt update -y
 
 ## Step #1 : Creating Prometheus System Users and Directory
 
 ### Create a system user for Prometheus using below commnds :
 
-~ sudo useradd --no-create-home --shell /bin/false prometheus
+    sudo useradd --no-create-home --shell /bin/false prometheus
 
 ### Create the directories in which we will be storing our configuration files and libraries :
 
-~ sudo mkdir /etc/prometheus
-~ sudo mkdir /var/lib/prometheus
+    sudo mkdir /etc/prometheus
+    sudo mkdir /var/lib/prometheus
 
 ## Step #2 : Download Prometheus Binary File
 
@@ -52,37 +52,37 @@
 
 ### You need to go inside /tmp dir :
 
-~ cd /tmp/
+    cd /tmp/
 
 ### Download the Prometheus setup using wget
 
-~ wget https://github.com/prometheus/prometheus/releases/download/v2.46.0/prometheus-2.46.0.linux-amd64.tar.gz
+    wget https://github.com/prometheus/prometheus/releases/download/v2.46.0/prometheus-2.46.0.linux-amd64.tar.gz
 
 ### Extract the files using tar :
 
-~ tar -xvf prometheus-2.46.0.linux-amd64.tar.gz
+    tar -xvf prometheus-2.46.0.linux-amd64.tar.gz
 
 ### Move the configuration file and set the owner to the prometheus user :
 
-~ cd prometheus-2.46.0.linux-amd64
+    cd prometheus-2.46.0.linux-amd64
 
-~ sudo mv console* /etc/prometheus
+    sudo mv console* /etc/prometheus
 
-~ sudo mv prometheus.yml /etc/prometheus
+    sudo mv prometheus.yml /etc/prometheus
 
-~ sudo chown -R prometheus:prometheus /etc/prometheus
+    sudo chown -R prometheus:prometheus /etc/prometheus
 
 ### Move the binaries and set the owner :
 
-~ sudo mv prometheus /usr/local/bin/
+    sudo mv prometheus /usr/local/bin/
 
-~ sudo chown prometheus:prometheus /usr/local/bin/prometheus
+    sudo chown prometheus:prometheus /usr/local/bin/prometheus
 
 ## Step #3 : Prometheus configuration file
 
 ### We have already copied /opt/prometheus-2.26.0.linux-amd64/prometheus.yml file /etc/prometheus directory, verify if it present and should look like below and modify it as per your requirement.
 
-~ sudo nano /etc/prometheus/prometheus.yml
+    sudo nano /etc/prometheus/prometheus.yml
 
 Enter this code and Ctrl + S to save and Ctrl + X to exit
 
