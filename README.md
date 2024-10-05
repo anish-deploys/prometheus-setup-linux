@@ -125,7 +125,7 @@ Enter this code and Ctrl + S to save and Ctrl + X to exit
 
 ### Now Prometheus service is ready to run and we can access it from any web browser.
 
-    http://server-IP-or-Hostname:9090
+    http://localhost:9090
     
 
 
