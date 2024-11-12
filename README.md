@@ -15,11 +15,11 @@
 
  ## Prometheus Components
  <ul>
-   <li>1. Prometheus Server</li>
-   <li>2. Service Discovery</li>
-   <li>3. Scrape Target</li>
-   <li>4. Alert Manager</li>
-   <li>5. User Interface</li>
+   <li>Prometheus Server</li>
+   <li>Service Discovery</li>
+   <li>Scrape Target</li>
+   <li>Alert Manager</li>
+   <li>User Interface</li>
  </ul>
 
 ## Prerequisites
